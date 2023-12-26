@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+    <div id="container-all">
+        <div id="containerImc" class="" >
+            <h1>Calculadora de IMC</h1>
+            <form id="form">
+                <div id="formControl">
+                    <div id="alturaContainer">
+                        <label for="peso">Altura:</label>
+                        <input type="number" name="altura" id="height" maxlength="4" placeholder="Exemplo: 2.10">
+                    </div>
+                    <div id="pesoContainer">
+                        <label for="peso">Peso:</label>
+                        <input type="number" name="peso" id="weight" maxlength="4" placeholder="Exemplo: 90,6">
+                    </div>
+                </div>
+                <div id="buttonsControl">
+                    <input type="submit" value="Calcular" id="calculate">
+                    <input type="submit" value="Limpar" id="clear">
+                </div>
+            </form>
+        </div>
+
+        <div id="containerResult" class="hide">
+            <p id="yourIMC" title="Índice de Massa Corpórea">Seu IMC: <span class="content"></span></p>
+            <p id="situation">Situação Atual: <span class="content"></span></p>
+            <h3 id="revews">Confira suas classificações:</h3>
+            <div id="containerTable">
+                <div class="classifications">
+                    <p class="classificationsItens">IMC</p>
+                    <p class="classificationsItens">Classificação</p>
+                    <p class="classificationsItens">Obesidade</p>
+                </div>
+                <div id="tableData">
+                    <span class="contentTable" id="magreza">
+                        <h4>Menor que 18,5</h4>
+                        <h4>Magreza</h4>
+                        <h4>Grau 0</h4>                        
+                    </span>
+                    <span class="contentTable" id="normal">
+                        <h4>Entre 18,5 e 24,9</h4>
+                        <h4>Normal</h4>
+                        <h4>Grau 0</h4>                        
+                    </span>
+                    <span class="contentTable" id="sobrepeso">
+                        <h4>Entre 25,0 e 29,9</h4>
+                        <h4>Sobrepeso</h4>
+                        <h4>Grau 1</h4>                        
+                    </span>
+                    <span class="contentTable" id="obesidade">
+                        <h4>Entre 30,0 e 39,9</h4>
+                        <h4>Obesidade</h4>
+                        <h4>Grau 2</h4>                        
+                    </span>
+                    <span class="contentTable" id="grave">
+                        <h4>Maior que 40</h4>
+                        <h4>Obesidade Grave</h4>
+                        <h4>Grau 3</h4>                        
+                    </span>
+                </div>
+            </div>
+            <button type="submit" id="back">Voltar</button>
+
+        </div>
+    </div>
+    
+</body>
+</html>

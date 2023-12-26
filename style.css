@@ -1,0 +1,249 @@
+:root {
+    --color-line: #e2dfdf3b;
+    --main-color: rgb(18, 2, 44);
+    --container-color: rgb(32, 28, 54);
+    --color-buttons: rgb(192, 15, 15);
+    --clear-buttons: rgb(70, 61, 61);
+    --color-buttons-hover: rgb(155, 9, 9);
+    --color-good: rgb(0, 255, 0);
+    --color-low: rgb(255, 255, 0);
+    --color-medium: rgb(255, 165, 0);
+    --color-high: rgb(185, 86, 86);
+    --color-very-high: rgb(255, 0, 0);
+    --color-mark: rgb(255, 251, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+
+.hide {
+    display: none !important; 
+}
+
+body {
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+}
+
+#container-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--container-color);
+    width: 500px;
+    border-radius: 5px;
+    display: flex;
+}
+
+#containerImc {
+    margin: 1rem;
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    color: white;
+}
+
+#containerImc h1 {
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 1rem;
+}
+
+#formControl, #alturaContainer, #pesoContainer {
+    display: flex;
+    flex-direction: column;
+    color: #cccccc;
+    text-align: left;
+    border-radius: 2px;
+    border: none;
+}
+
+#formControl input {
+    padding: 1rem;
+    text-align: left;
+    color: black;
+}
+
+#formControl {
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#alturaContainer, #pesoContainer {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+}
+
+#buttonsControl {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#buttonsControl input, #containerResult #back {
+    padding: 1rem;
+    color: white;
+    width: 100%;
+    border: none;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#buttonsControl #calculate {
+    background-color: var(--color-buttons);
+    opacity: 0.8;
+}
+
+#buttonsControl #calculate:hover {
+    opacity: 1;
+}
+
+#buttonsControl #clear {
+    background-color: var(--clear-buttons);
+    opacity: 0.8;
+}
+
+#buttonsControl #clear:hover {
+    opacity: 1;
+}
+
+#buttonsControl input:hover {
+    background-color: var(--color-buttons-hover);
+}
+
+/* Outra tela */
+
+#containerResult {
+    margin: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    flex-direction: column;
+    padding: 1rem 1rem;
+    color: white;
+}
+
+#containerResult #yourIMC {
+    font-size: 2rem;
+}
+
+#containerResult #situation {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+#yourIMC .content, #situation .content {
+    font-weight: bold;
+}
+
+#containerResult #revews {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#containerTable {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid var(--color-line);
+    width: 100%;
+    padding-top: 1rem;
+}
+
+.classifications, #tableData {
+    margin: 0 1rem;
+}
+
+.classifications, .contentTable {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.contentTable h4 {
+    font-size: 0.8rem;
+}
+
+.classifications p {
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.contentTable {
+    border-bottom: 1px solid var(--color-line);
+}
+
+.contentTable h4, .classifications p {
+    flex: 1;
+    border-right: 1px solid var(--color-line);
+}
+
+.contentTable h4:nth-child(3),
+.classifications p:nth-child(3) {
+    border-right: none;
+}
+
+.classifications:last-child,
+.contentTable:last-child {
+    border-bottom: none;
+    
+}
+
+.contentTable:first-child {
+    border-top: 1px solid var(--color-line);
+    padding-top: .5rem;
+
+}
+
+#containerResult #back {
+    max-width: 40%;
+    margin-top: 1rem;
+    background-color: var(--color-buttons);
+    opacity: 0.8;
+}
+
+#containerResult #back:hover {
+    opacity: 1;
+}
+
+.good {
+    color: var(--color-good)
+}
+
+.low {
+    color: var(--color-low)
+}
+
+.medium {
+    color: var(--color-medium)
+}
+
+.high {
+    color: var(--color-high)
+}
+
+.very-high {
+    color: var(--color-very-high)
+}
+
+.colorMark {
+    color: var(--color-mark);
+}
